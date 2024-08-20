@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "django-sample"
+version = "0.1.0"
+description = ""
+authors = ["manabreakmura <174273321+manabreakmura@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.1"
+python-dotenv = "^1.0.1"
+black = "^24.8.0"
+psycopg = "^3.2.1"
+psycopg-binary = "^3.2.1"
+djangorestframework = "^3.15.2"
+markdown = "^3.7"
+django-filter = "^24.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
