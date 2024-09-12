@@ -18,16 +18,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
+from rest_framework.authtoken import views
 
+from posts.views import PostViewSet
 from users.views import UserViewSet
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api-auth/", include("rest_framework.urls")),
+    path("api-token-auth/", views.obtain_auth_token),
 ]
 
 router = routers.DefaultRouter()
 router.register(r"users", UserViewSet)
+router.register(r"posts", PostViewSet)
 
 
 urlpatterns += router.urls
